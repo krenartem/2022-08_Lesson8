@@ -4,13 +4,15 @@
 int[,,] Create3DArray(int x, int y, int z)
 {
     int[,,] RandomArray = new int[x, y, z];
+    int number = 10;
     for (int i = 0; i < x; i++)
     {
         for (int j = 0; j < y; j++)
         {
             for (int k = 0; k < z; k++)
             {
-                RandomArray[i, j, k] = new Random().Next(1, 10);
+                RandomArray[i, j, k] = number;
+                number++;
             }
         }
     }
@@ -34,8 +36,8 @@ void PrintArray(int[,,] inArray)
 
 Console.Clear();
 Console.WriteLine("Создаем массив...");
-int x = new Random().Next(2, 6);
-int y = new Random().Next(2, 6);
-int z = new Random().Next(2, 6);
+int x = new Random().Next(2, 5);
+int y = new Random().Next(2, 5);
+int z = new Random().Next(2, 5);
 int[,,] Array1 = Create3DArray(x, y, z);
 PrintArray(Array1);
